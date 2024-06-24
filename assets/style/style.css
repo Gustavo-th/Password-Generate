@@ -1,0 +1,49 @@
+body {
+    background-color: #2F4F4F;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+.passwords{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin: 0 auto;
+}
+.passwords {
+    padding: 5px 10px;
+    background-color: #778899 ;
+    border-radius: 10px;
+    color: black;
+    border: 2px solid  transparent;
+
+}
+p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button {
+    padding: 5px;
+    margin: 10px;
+    color: black;
+    background-color: white;
+}
+
+h2{
+    color: white;
+    text-align: center;
+}
+footer{
+    display: flex;
+    text-align: center;
+}
+a{
+    color: white;
+    font-weight: bold;
+    margin: 0px auto;
+
+}
