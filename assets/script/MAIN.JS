@@ -1,24 +1,32 @@
 const input = document.querySelector(".passwords");
 const btn_gerar = document.querySelector(".generate");
-const btn_copy = document.querySelector(".copy");
+const btn_clear = document.querySelector(".clear");
 
 function generatePassword() {
-  btn_gerar.addEventListener("click", function (e) {
-    let randomPassword = Math.random().toString(36).slice(-8);
-    input.value = randomPassword;
-  });
+  const chars =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
+  let password = "";
+  for (let i = 0; i < 12; i++) {
+    const randomIndex = Math.floor(Math.random() * chars.length);
+    password += chars[randomIndex];
+  }
+  return password;
 }
-
+function setGeneratePassword() {
+  input.value = generatePassword();
+}
 function clearPassword() {
-  const clearPassword = document.querySelector(".clear");
-  clearPassword.addEventListener("click", function (e) {
-    input.value = "";
-  });
+  input.value = "";
 }
 
 function copyPassword() {
-  btn_copy.addEventListener("click", function () {
+  if (input.value !== "") {
     navigator.clipboard.writeText(input.value);
-    alert("Sucessfully copied");
-  });
+    alert("Success!");
+  } else {
+    alert("Nothing to copy");
+  }
 }
+
+btn_gerar.addEventListener("click", setGeneratePassword);
+btn_clear.addEventListener("click", clearPassword);
