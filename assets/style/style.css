@@ -1,10 +1,11 @@
 body {
-    background-color: #2F4F4F;
+    background-color: #080a0a;
 }
 
 h1 {
     color: white;
     text-align: center;
+    font-family: sans-serif;
 }
 .passwords{
     display: flex;
@@ -13,13 +14,18 @@ h1 {
     width: 50%;
     margin: 0 auto;
 }
+.passwords:focus{
+    outline: none;
+}
 .passwords {
     padding: 5px 10px;
-    background-color: #778899 ;
-    border-radius: 10px;
+    background-color: #fcfcfc ;
+    border-radius: 15px;
     color: black;
-    border: 2px solid  transparent;
-
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 20px;
 }
 p {
     display: flex;
@@ -31,18 +37,18 @@ button {
     margin: 10px;
     color: black;
     background-color: white;
+    border-radius: 15px;
+    cursor: pointer;
 }
 
-h2{
-    color: white;
-    text-align: center;
-}
 footer{
     display: flex;
     text-align: center;
+    padding: 20px;
 }
 a{
     color: white;
+    font-family: sans-serif;
     font-weight: bold;
     margin: 0px auto;
 
